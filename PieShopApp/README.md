@@ -1,3 +1,0 @@
-# PieShopApp
-
-tutorial pluralsight
