@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PieShopApp", "PieShopApp.csproj", "{58A7D797-4F0C-4E04-BA2F-9699F205A94D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PieShopAppTests", "..\PieShopAppTests\PieShopAppTests.csproj", "{83A71AFF-8CED-46AB-8FE7-064DF21A5EE4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{58A7D797-4F0C-4E04-BA2F-9699F205A94D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58A7D797-4F0C-4E04-BA2F-9699F205A94D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58A7D797-4F0C-4E04-BA2F-9699F205A94D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58A7D797-4F0C-4E04-BA2F-9699F205A94D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83A71AFF-8CED-46AB-8FE7-064DF21A5EE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83A71AFF-8CED-46AB-8FE7-064DF21A5EE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83A71AFF-8CED-46AB-8FE7-064DF21A5EE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83A71AFF-8CED-46AB-8FE7-064DF21A5EE4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {675D69C8-35A2-40C4-851C-CDA2C7D8C464}
+	EndGlobalSection
+EndGlobal
