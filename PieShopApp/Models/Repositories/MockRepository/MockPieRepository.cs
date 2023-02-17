@@ -19,5 +19,10 @@ namespace PieShopApp.Models.Repositories.MockRepository
         public IEnumerable<Pie> PiesOfTheWeek => AllPies.Where(x => x.IsPieOfTheWeek);
 
         public Pie? GetPieById(int pieId) => AllPies.FirstOrDefault(x => x.PieId == pieId);
+
+        public IEnumerable<Pie> SearchPies()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
