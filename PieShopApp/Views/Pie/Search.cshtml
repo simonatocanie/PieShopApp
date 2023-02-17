@@ -1,0 +1,62 @@
+﻿@model IEnumerable<Pie>
+<br />
+<br />
+<br />
+<br />
+  Enter your search query:
+<input id="txtPieName" type="text" onkeyup="onKeyUp()" />
+<button id="searchButton">Search</button>
+<br />
+<br />
+<table id="tblPies" cellpadding="0" cellspacing="0">
+    <thead>
+        <tr>
+            <th class="col-md-4">Image</th>
+            <th class="col-md-2 p-lg-5">Name</th>
+            <th class="col-md-1">Price</th>
+            <th class="col-md-4">AlergyInformation</th>
+            <th class="col-md-1">In Stock</th>
+        </tr>
+    </thead>
+    <tbody id="tableBody">
+        @foreach (var pie in Model)
+        {
+            <tr>
+                <td><img src="@pie.ImageThumbnailUrl" class="img-fluid d-block w-100 mb-3" /></td>
+                <td class="p-lg-5">@pie.Name</td>
+                <td>@pie.Price.ToString("c")</td>
+                <td>@pie.AllergyInformation</td>
+                <td>@pie.InStock</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
+
+<script type="text/javascript">
+
+    var minlength = 2;
+    onKeyUp();
+
+    function onKeyUp() {
+        var searchQuery = $("#txtPieName").val();
+
+        if (searchQuery.length >= minlength || searchQuery == "") {
+            fetch("/api/Search", {
+                method: 'POST',
+                headers: {
+                    'Accept': 'application/json',
+                    'Content-Type': 'application/json'
+                },
+                url: "/api/Search",
+                body: "\"" + searchQuery + "\""
+            })
+                .then(response => response.json())
+                .then((pies) => {
+                    $("#tblPies").load(location.href + " #tblPies")
+                })
+                .catch(error => console.error('Unable to add item.', error));
+        }
+    }
+</script>

@@ -2,6 +2,7 @@
 using PieShopApp.Models;
 using PieShopApp.Models.Repositories.Repositories;
 using PieShopApp.ViewModels;
+using System.Security.Cryptography.Xml;
 
 namespace PieShopApp.Controllers
 {
@@ -15,10 +16,6 @@ namespace PieShopApp.Controllers
             this.pieRepository = pieRepository;
             this.categoryRepository = categoryRepository;
         }
-        //public IActionResult List()
-        //{
-        //    return View(new PieListViewModel(pieRepository.AllPies, "All pies"));
-        //}
 
         public IActionResult List(string category)
         {
@@ -45,6 +42,11 @@ namespace PieShopApp.Controllers
                 return NotFound();
 
             return View(pie);
+        }
+
+        public IActionResult Search()
+        {
+            return View(pieRepository.SearchPies());
         }
     }
 }
