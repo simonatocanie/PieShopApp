@@ -1,4 +1,6 @@
 ###############################################################################
+*.ang linguist-language=Angular
+
 # Set default behavior to automatically normalize line endings.
 ###############################################################################
 * text=auto
